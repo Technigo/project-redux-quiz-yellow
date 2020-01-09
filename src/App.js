@@ -3,6 +3,7 @@ import { Provider } from "react-redux";
 import { combineReducers, configureStore } from "@reduxjs/toolkit";
 import { quiz } from "reducers/quiz";
 import { AnswerContainer } from "components/AnswerContainer";
+import { Button } from "components/Button";
 
 import { CurrentQuestion } from "components/CurrentQuestion";
 
@@ -17,6 +18,7 @@ export const App = () => {
     <Provider store={store}>
       <CurrentQuestion />
       <AnswerContainer />
+      <Button />
     </Provider>
   );
 };
