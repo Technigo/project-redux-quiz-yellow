@@ -5,6 +5,7 @@ import { Button } from "components/Button";
 import { Summary } from "components/Summary";
 import { ProgressCount } from "components/ProgressCount";
 import { CurrentQuestion } from "components/CurrentQuestion";
+import { Feedback } from "components/Feedback";
 
 export const QuizContainer = () => {
   const quizEnd = useSelector(state => state.quiz.quizOver);
@@ -15,6 +16,7 @@ export const QuizContainer = () => {
         <>
           <CurrentQuestion />
           <AnswerContainer />
+          <Feedback />
         </>
       )}
       {quizEnd && <Summary />}
