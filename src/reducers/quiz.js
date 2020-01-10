@@ -4,16 +4,59 @@ import { createSlice } from "@reduxjs/toolkit";
 const questions = [
   {
     id: 1,
-    questionText: "Who set the Olympic record for the 100m dash in 2012?",
-    options: ["Usain Bolt", "Justin Gatlin", "Tyson Gay", "Asafa Powell"],
+    questionText: "Who was the first person to find the first bug?",
+    options: [
+      "Grace Murray Hopper",
+      "Marie Curie",
+      "Agnes Ketesdi",
+      "Ann Langley"
+    ],
     correctAnswerIndex: 0
   },
   {
     id: 2,
     questionText:
-      "When was Michael Phelps last named male World Swimmer of the Year?",
-    options: ["2012", "2014", "2016", "2018"],
-    correctAnswerIndex: 2
+      "Which woman was the lead software engineer on Project Apollo?",
+    options: [
+      "Margaret Hamilton",
+      "Isabel Drost - Fromm",
+      "Carol Shaw",
+      "Jerry Ellsworth"
+    ],
+    correctAnswerIndex: 0
+  },
+  {
+    id: 3,
+    questionText: "Who was the world’s first computer programmer?",
+    options: [
+      "Ada Lovelace",
+      "Katherine Coleman Goble Johnson",
+      "Adele Mildred Koss",
+      "Lilan McLauren"
+    ],
+    correctAnswerIndex: 0
+  },
+  {
+    id: 4,
+    questionText: "Who was the first woman in NASA ?",
+    options: [
+      "Katherine Coleman Goble Johnson",
+      "Emelie Dickens",
+      "Jenna Pfeiffer",
+      "Susan Meyer"
+    ],
+    correctAnswerIndex: 0
+  },
+  {
+    id: 5,
+    questionText: "Who's the current CEO of Youtube?",
+    options: [
+      "Susan Wojcicki",
+      "Sheryl Sandberg",
+      "Ernestine Martin",
+      "Manuela Hernandez"
+    ],
+    correctAnswerIndex: 0
   }
 ];
 

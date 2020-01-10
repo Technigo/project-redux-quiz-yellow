@@ -1,6 +1,7 @@
 import React from "react";
 import { quiz } from "../reducers/quiz";
 import { useSelector, useDispatch } from "react-redux";
+import "./answerContainer.css";
 
 export const AnswerContainer = () => {
   const options = useSelector(
@@ -15,6 +16,7 @@ export const AnswerContainer = () => {
 
   return options.map((option, index) => (
     <button
+      className="answer-button"
       onClick={() =>
         dispatch(
           quiz.actions.submitAnswer({ questionId: id, answerIndex: index })
