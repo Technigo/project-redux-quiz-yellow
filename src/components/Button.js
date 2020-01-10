@@ -9,14 +9,13 @@ export const Button = () => {
   const dispatch = useDispatch();
 
   const quizEnd = useSelector(state => state.quiz.quizOver);
-  const changeButton = () => {
-    if (quizEnd === true) {
-    }
-  };
+  const hasAnswer = useSelector(
+    state => state.quiz.answers[state.quiz.currentQuestionIndex]
+  );
 
   return (
     <>
-      {!quizEnd && (
+      {!quizEnd && hasAnswer && (
         <button
           className="next-button"
           type="button"
@@ -32,7 +31,7 @@ export const Button = () => {
           type="button"
           onClick={() => dispatch(quiz.actions.restart())}
         >
-          Summary
+          Restart
         </button>
       )}
     </>
