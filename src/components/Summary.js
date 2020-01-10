@@ -10,7 +10,6 @@ export const Summary = () => {
 
   const totalCorrectAnswers = correctAnswers.length;
 
-  //console.log(correctAnswers);
   return (
     // How many correct answers
     //text

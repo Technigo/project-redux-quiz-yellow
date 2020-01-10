@@ -12,16 +12,29 @@ export const Button = () => {
   const hasAnswer = useSelector(
     state => state.quiz.answers[state.quiz.currentQuestionIndex]
   );
+  const currentQuestionNumber = useSelector(
+    state => state.quiz.questions[state.quiz.currentQuestionIndex].id
+  );
+  const numberOfQuestions = useSelector(state => state.quiz.questions.length);
 
   return (
     <>
-      {!quizEnd && hasAnswer && (
+      {!quizEnd && hasAnswer && currentQuestionNumber != numberOfQuestions && (
         <button
           className="next-button"
           type="button"
           onClick={() => dispatch(quiz.actions.goToNextQuestion())}
         >
           Next question
+        </button>
+      )}
+      {!quizEnd && currentQuestionNumber === numberOfQuestions && (
+        <button
+          className="next-button"
+          type="button"
+          onClick={() => dispatch(quiz.actions.goToNextQuestion())}
+        >
+          Submit
         </button>
       )}
 
